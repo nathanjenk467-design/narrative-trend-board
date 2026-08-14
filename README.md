@@ -1,2 +1,1 @@
-# narrative-trend-board
-Live Narrative trend board. Bookmark and refresh.
+This repo is no longer public. The trend board is local only.
