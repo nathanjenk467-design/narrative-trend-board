@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trend board — 14 Aug 2026</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --ink: #f0f3f6;
+    --muted: #b4bcc6;
+    --line: #2a313a;
+    --emerging: #1e3a5f;
+    --rising: #1a4d2e;
+    --peaking: #5c4a1f;
+    --fading: #3d3d3d;
+    --dead: #2a2222;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.45 "IBM Plex Sans", "Segoe UI", sans-serif;
+  }
+  header { padding: 28px 32px 8px; }
+  header h1 { margin: 0 0 10px; font-size: 24px; font-weight: 650; }
+  .lede {
+    max-width: 920px;
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 8px;
+  }
+  .meta { color: var(--muted); font-size: 13px; margin: 0; }
+  .legend {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    padding: 12px 32px 0; color: var(--muted); font-size: 13px;
+  }
+  .swatch {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 2px; margin-right: 6px; vertical-align: -1px;
+  }
+  .board {
+    display: grid;
+    grid-template-columns: 1.15fr 1.15fr 0.85fr 0.85fr 0.75fr;
+    gap: 12px;
+    padding: 18px 32px 8px;
+    align-items: start;
+  }
+  .col {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .col h2 {
+    margin: 0 0 10px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 6px;
+  }
+  .col.emerging h2 { background: var(--emerging); }
+  .col.rising h2 { background: var(--rising); }
+  .col.peaking h2 { background: var(--peaking); }
+  .col.fading h2 { background: var(--fading); }
+  .col.dead h2 { background: var(--dead); }
+  .card {
+    background: #0e1116;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 13px;
+    margin-bottom: 8px;
+  }
+  .card .n { font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+  .card .title { font-weight: 650; font-size: 16px; }
+  .card .story { margin-top: 6px; font-size: 14px; color: var(--ink); }
+  .card .force { margin-top: 8px; font-size: 13px; color: var(--muted); }
+  .card .from { margin-top: 6px; font-size: 12px; color: #8b94a0; }
+  .card.fight { border-color: #8a3a3a; }
+  .empty { color: var(--muted); font-size: 13px; padding: 8px; }
+  .strip {
+    margin: 8px 32px 28px;
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .strip h2 {
+    margin: 0 0 10px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: var(--peaking);
+  }
+  .spent { background: var(--fading) !important; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .row .card { width: 420px; margin: 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Trend board</h1>
+  <p class="lede">The money in AI is moving from the people who train models to the people who own plants, power, and chips. The smartest two labs can still charge for the model. Everyone else is selling tokens, rent, or software that a chatbot can replace. China is catching up by buying data and copying open weights, and by locking the ugly supply chains the West forgot. July’s stock scare did not show up in the factories.</p>
+  <p class="meta">14 Aug 2026, first pass. Heat is what the world is doing, plus who is talking. Nothing peaking. Nothing killed.</p>
+</header>
+
+<div class="legend">
+  <span><i class="swatch" style="background:#1e3a5f"></i>Emerging</span>
+  <span><i class="swatch" style="background:#1a4d2e"></i>Rising</span>
+  <span><i class="swatch" style="background:#5c4a1f"></i>Peaking</span>
+  <span><i class="swatch" style="background:#3d3d3d"></i>Fading</span>
+  <span><i class="swatch" style="background:#2a2222"></i>Dead</span>
+</div>
+
+<section class="board">
+  <div class="col rising">
+    <h2>Rising</h2>
+    <article class="card">
+      <div class="n">1</div>
+      <div class="title">Computer landlords take the money</div>
+      <div class="story">Google is putting cash into data-center plants, not into the next model. The model scientists are leaving. Cloud wants to rent those same chips to Anthropic. SpaceX is standing up a chip-rental business next to Starlink. The people who own the building and the power are becoming the real AI company.</div>
+      <div class="force">Force: capital follows the scarce physical thing (plants, power, chips), not the research team.</div>
+      <div class="from">From: All-In 8 Aug (Friedberg, Gerstner). Stratechery: Google the capital company, Microsoft and neo-clouds. BG2: SpaceX as must-own.</div>
+    </article>
+    <article class="card">
+      <div class="n">2</div>
+      <div class="title">Two-tier intelligence</div>
+      <div class="story">Anthropic and OpenAI can still charge for the model itself. Labs a year behind cannot. They only charge for computers and consulting. Cheap and Chinese open models take most of the tokens. Money and tokens have split into two markets.</div>
+      <div class="force">Force: the frontier is still scarce. Everything below it is a commodity.</div>
+      <div class="from">From: All-In (Sacks). 20VC Atallah. BG2 (frontier keeps ~90% of the dollars). Stratechery on Chinese models.</div>
+    </article>
+    <article class="card">
+      <div class="n">3</div>
+      <div class="title">Cheap tokens feed the plants</div>
+      <div class="story">When a model got ten times cheaper, people used it thirteen times more. July’s scare about Chinese open models is good for chip and power landlords, not a kill. The tokens still need the same machines. Margin moves from the lab to the plant.</div>
+      <div class="force">Force: cheaper intelligence creates more work, not a smaller pie.</div>
+      <div class="from">From: 20VC Atallah (Luna). Gavin Baker 4 Aug. All-In Friedberg on mixing cheap and expensive models.</div>
+    </article>
+  </div>
+
+  <div class="col emerging">
+    <h2>Emerging</h2>
+    <article class="card">
+      <div class="n">4</div>
+      <div class="title">No-code software is the kill zone</div>
+      <div class="story">Airtable sold for about a tenth of its 2021 peak, still profitable. Sacks says do not call this the death of all business software. The slice getting eaten is the tool you learned instead of hiring a programmer. A chatbot now replaces that learning curve. Software glued into government and compliance is a different animal. A software company that only hits its old plan is already destroying value, because the AI-native ones grow past it.</div>
+      <div class="force">Force: if the product was “easier than code,” the model is now the product.</div>
+      <div class="from">From: All-In Airtable. Vishria 11 Aug (hitting plan destroys equity).</div>
+    </article>
+    <article class="card">
+      <div class="n">5</div>
+      <div class="title">China catches up through data, not invasion</div>
+      <div class="story">American shops are selling labeled, expert-corrected training data to Chinese labs. Jason says that last-mile correction is the real catch-up, same family as copying a model. Sacks says it is a commodity, not like the 2019 chip-machine ban. Gerstner: Washington only keeps that view while the US is winning. Atallah says US companies fear OpenAI’s data policy more than a Chinese open model they can run themselves.</div>
+      <div class="force">Force: the race is about packaged human judgment and open weights, not a blockade story.</div>
+      <div class="from">From: All-In close. 20VC Atallah. Stratechery: Who’s afraid of Chinese models.</div>
+    </article>
+    <article class="card">
+      <div class="n">6</div>
+      <div class="title">The AI build is using weirder money</div>
+      <div class="story">Labs pay 3 to 5 times for scarce chips. Sellers finance buyers. Nvidia is reaching into insurance floats and pension money, not just cash and ordinary borrowing. Gavin says breaking a long memory contract can zero your future supply. This is still mostly talk plus a few structures. The factories are still being paid. The fragility is if revenue does not show up after the exotic paper does.</div>
+      <div class="force">Force: when cash is not enough, the stack starts lending to itself.</div>
+      <div class="from">From: All-In (Gurley circular). Stratechery 11 Aug Nvidia’s risky business. Gavin Baker on credit wrappers.</div>
+    </article>
+    <article class="card">
+      <div class="n">8</div>
+      <div class="title">Agents can do a real back-office job</div>
+      <div class="story">A standard “can it use a computer” test went from 42% to 85%, past the human line, after February 2026. The work that holds up is boring and repeatable: hitting portals, closing tickets, following a protocol. Buyers already think the model is good enough. They pay for the harness. Clicking is cheap. The moat is one company’s private mess: who to call, how to check, which login. A smarter model does not fix a process whose answer arrives as a phone call two days later.</div>
+      <div class="force">Force: the bottleneck moved from “can it click” to “does this company know its own process.”</div>
+      <div class="from">From: a16z 10 Aug, Can agents use a computer yet.</div>
+    </article>
+    <article class="card">
+      <div class="n">9</div>
+      <div class="title">Older chips start to matter again</div>
+      <div class="story">Training wanted the newest chip. Running models for users, especially agents with no human in the loop, can use a mixed bag, including older factory nodes. An H100 is worth more today than three years ago. This is the same story you already kept: cards stay useful longer than a six-year write-off. It also feeds the landlords: more of the installed base stays in the money.</div>
+      <div class="force">Force: once the job is answering, not training, yesterday’s machine is still a machine.</div>
+      <div class="from">From: Stratechery inference shift. Dylan Patel (H100). Enforces your compute-dearer note, does not reopen it.</div>
+    </article>
+    <article class="card">
+      <div class="n">10</div>
+      <div class="title">China is locking the ugly supply chains</div>
+      <div class="story">China stopped exporting research monkeys. Prices jumped, US labs ran short. It already refines most rare earths and is moving to own the robots that run the mines, not just the rocks. In the Iran oil shock it quietly cut imports from stockpiles the West cannot see. The FCC just swept robot vacuums and humanoids onto a national-security import list. This is not the TSMC-plants story. It is everything around the plants that nobody built a second source for.</div>
+      <div class="force">Force: whoever owns the unglamorous input (animals, mine software, oil in tanks, household robots) can turn it off.</div>
+      <div class="from">From: ChinaTalk 14 Jul–13 Aug (monkeys, minerals, oil, FCC robots).</div>
+    </article>
+    <article class="card fight">
+      <div class="n">11</div>
+      <div class="title">Three brakes, no winner yet</div>
+      <div class="story">Vishria says energy is the intelligence bottleneck, and China adds far more power than the US next year. Dylan Patel says power can scale, and the 2030 bind is the rarest chip-making machines. Elon and Stratechery say put the plants in space because permits on the ground are the real wall. Dylan says space chips are not this decade. These cannot all be the only brake. The board keeps them as a fight.</div>
+      <div class="force">Force: three different scarce things are being sold as “the” limit. The world will pick by what actually fails first.</div>
+      <div class="from">From: Vishria 11 Aug. Dylan Patel 13 Mar. Dwarkesh Elon 5 Feb. Stratechery SpaceX IPO.</div>
+    </article>
+    <article class="card">
+      <div class="n">12</div>
+      <div class="title">Labs versus the state</div>
+      <div class="story">The US moved to stop working with Anthropic and later ordered it to cut its strongest models off from foreign nationals, including its own staff, which forced a shutdown for everyone. Ben Thompson says Anthropic’s safety story and its business are the same thing: sell “we are the adults” to companies, and every Washington fight is also marketing. Adversaries will build the weapons anyway. This is political heat, not factory heat.</div>
+      <div class="force">Force: a private lab that claims a veto on national power will get treated as a national-security object.</div>
+      <div class="from">From: Stratechery Anthropic and alignment, Anthropic’s safety superpower, Who’s afraid of Chinese models.</div>
+    </article>
+    <article class="card">
+      <div class="n">13</div>
+      <div class="title">Rates up, the job already dead</div>
+      <div class="story">US trucking rates jumped because they kicked supply out (licenses, language tests, lawsuit risk), not because the economy came back. Drivers are more miserable than when rates were low: cameras and speed limiters killed the cowboy job. Parking is short. Brokers need a safe-harbor checkbox after huge verdicts. One industry so far. The pattern to watch: the price of the work goes up while the life of the worker gets worse, because the state is shrinking who is allowed to do it.</div>
+      <div class="force">Force: supply was chopped by rule, not by demand. Pain sits under this. The story is the pattern.</div>
+      <div class="from">From: Odd Lots 13 Aug. Pain stream stays separate.</div>
+    </article>
+    <article class="card">
+      <div class="n">14</div>
+      <div class="title">Models start doing AI research</div>
+      <div class="story">Ryan Greenblatt’s median: once models match top human AI researchers, better models make better models, and four or five years of progress pack into one year. Dwarkesh is skeptical. One guest is not a peak. If it starts, every other card on this board moves faster. Until there is a second serious voice plus a measurement, it stays emerging and uncertain.</div>
+      <div class="force">Force: the research loop, if it closes, is a different species of trend. It changes the clock.</div>
+      <div class="from">From: Dwarkesh 11 Aug, Ryan Greenblatt.</div>
+    </article>
+  </div>
+
+  <div class="col peaking">
+    <h2>Peaking</h2>
+    <p class="empty">Empty. Nothing we will call a peak. A peak would mean the world is already doing it at full scale and the next tape can only fade it.</p>
+  </div>
+
+  <div class="col fading">
+    <h2>Fading</h2>
+    <p class="empty">Empty. This is the column that matters for deaths. When a rising story stops showing up in factories, it moves here before it dies.</p>
+  </div>
+
+  <div class="col dead">
+    <h2>Dead</h2>
+    <p class="empty">Empty. Nothing killed this pass.</p>
+  </div>
+</section>
+
+<section class="strip">
+  <h2>Thermometer</h2>
+  <div class="row">
+    <article class="card">
+      <div class="n">7</div>
+      <div class="title">July: talk crashed, factories sped up</div>
+      <div class="story">AI stock prices felt like 2022 in a month. Gavin Baker could not find a single negative on-the-ground number: chip availability, rental prices, memory, token growth all accelerated. Everyone now feeds the news into Claude, so the market’s interpretation collapsed to one voice. This is not a world story. It is the instrument that tells you attention and reality have split.</div>
+      <div class="force">Force: price is not the factory.</div>
+      <div class="from">From: Gavin Baker 4 Aug.</div>
+    </article>
+  </div>
+</section>
+
+<section class="strip">
+  <h2 class="spent">Spent, still live</h2>
+  <div class="row">
+    <article class="card">
+      <div class="n">S1</div>
+      <div class="title">TSMC did not build enough plants</div>
+      <div class="story">The brake on AI is that they did not build enough factories. China-invasion talk is political theater next to that. Nothing this week kills it. It is not a new card.</div>
+      <div class="from">Already discussed. Still the supply-side brake under card 1 and card 11.</div>
+    </article>
+    <article class="card">
+      <div class="n">S2</div>
+      <div class="title">Compute is getting dearer</div>
+      <div class="story">You already kept this, and added that a six-year write-off looks wrong because cards stay useful. This week enforced it (H100 worth more, cheaper tokens used more). Not re-opened as new.</div>
+      <div class="from">Already discussed. Fed by cards 3 and 9.</div>
+    </article>
+  </div>
+</section>
+</body>
+</html>
