@@ -105,6 +105,52 @@
   .card .heat b { color: #c9b27a; font-weight: 650; }
   .card.fight { border-color: #8a3a3a; }
   .empty { color: var(--muted); font-size: 13px; padding: 8px; }
+
+  .tabs { display: flex; gap: 8px; padding: 16px 32px 0; }
+  .tabs button {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font: 13px/1.2 inherit;
+    cursor: pointer;
+  }
+  .tabs button.on {
+    background: #1a4d2e;
+    border-color: #1a4d2e;
+    color: #fff;
+  }
+  .pane { display: none; }
+  .pane.on { display: block; }
+  .preds {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 0.8fr 0.8fr;
+    gap: 12px;
+    padding: 18px 32px 28px;
+    align-items: start;
+  }
+  .col.open h2 { background: var(--emerging); }
+  .col.stronger h2 { background: var(--rising); }
+  .col.weaker h2 { background: var(--peaking); }
+  .col.hit h2 { background: #1a4d2e; }
+  .col.miss h2 { background: var(--dead); }
+  .card .claim { margin-top: 6px; font-size: 14px; }
+  .card .stats { margin-top: 8px; font-size: 12px; color: #c9b27a; }
+  .card .sensor { margin-top: 6px; font-size: 12px; color: #8b94a0; }
+  .theme {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    border: 1px solid #2a313a;
+    color: #b4bcc6;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    vertical-align: 2px;
+  }
 </style>
 </head>
 <body>
@@ -114,7 +160,12 @@
   <p class="meta">14 Aug 2026. Heat = impact + relevance + attention (each 1–5). Columns are lifecycle. Order inside a column is hottest first. Your view overrides the number.</p>
 </header>
 
-<div class="legend">
+
+<div class="tabs">
+  <button class="on" data-pane="trends">Trends</button>
+  <button data-pane="preds">Predictions</button>
+</div>
+<div class="legend" id="trend-legend">
   <span><i class="swatch" style="background:#1e3a5f"></i>Emerging</span>
   <span><i class="swatch" style="background:#1a4d2e"></i>Rising</span>
   <span><i class="swatch" style="background:#5c4a1f"></i>Peaking</span>
@@ -124,6 +175,7 @@
   <span>tags: thermometer · fight · msm</span>
 </div>
 
+<div class="pane on" id="pane-trends">
 <section class="board">
   <div class="col rising">
     <h2>Rising</h2>
@@ -276,5 +328,94 @@
     <p class="empty">Empty. Nothing killed this pass.</p>
   </div>
 </section>
+</div>
+
+<div class="pane" id="pane-preds">
+  <div class="legend">
+    <span><i class="swatch" style="background:#1e3a5f"></i>Open</span>
+    <span><i class="swatch" style="background:#1a4d2e"></i>Stronger</span>
+    <span><i class="swatch" style="background:#5c4a1f"></i>Weaker</span>
+    <span><i class="swatch" style="background:#1a4d2e"></i>Hit</span>
+    <span><i class="swatch" style="background:#2a2222"></i>Miss</span>
+    <span>C confidence · I impact · horizon · sensor</span>
+  </div>
+  <section class="preds">
+    <div class="col open">
+      <h2>Open</h2>
+      <article class="card">
+        <div class="n">P1 <span class="theme">compute</span></div>
+        <div class="title">By year-end the plants are still the brake</div>
+        <div class="claim">On 31 Dec 2026, chip rental prices and factory lead times are still tight or tighter than today, even if AI stocks have another scare. The July pattern repeats: papers panic, plants do not.</div>
+        <div class="stats">C4 · I5 · horizon 31 Dec 2026</div>
+        <div class="from">From trends 15, 16, 7.</div>
+        <div class="sensor">Sensor: GPU rental index and TSMC / CoWoS lead times vs an AI stock basket. Hit if plants stay tight after a scare. Miss if lead times and rents break while talk stays hot.</div>
+      </article>
+      <article class="card">
+        <div class="n">P2 <span class="theme">credit</span></div>
+        <div class="title">Weirder money produces a public crack</div>
+        <div class="claim">Within 12 months, one AI-linked credit, insurance-float, or pension structure is restructured, defaulted, or forced into a public filing that names the circular bit.</div>
+        <div class="stats">C3 · I5 · horizon 14 Aug 2027</div>
+        <div class="from">From trend 6. Narratives: Gurley circular, Nvidia risky business, Gavin credit wrappers.</div>
+        <div class="sensor">Sensor: a named facility in a 10-K, bankruptcy, or FT/WSJ reconstruction. Talk alone is not a hit. Miss if the build is still paid in ordinary cash and the exotic paper is gone.</div>
+      </article>
+      <article class="card">
+        <div class="n">P3 <span class="theme">compute</span></div>
+        <div class="title">Dollars stay at the frontier. Tokens do not.</div>
+        <div class="claim">In 12 months OpenAI and Anthropic still take most of the model dollars. Cheap and Chinese open models take most of the tokens. The two markets do not re-merge.</div>
+        <div class="stats">C4 · I4 · horizon 14 Aug 2027</div>
+        <div class="from">From trends 2 and 3. Narratives: Sacks two-tier, Atallah Luna, BG2 90% dollars.</div>
+        <div class="sensor">Sensor: OpenRouter mix plus lab earnings / API price. Hit if dollars and tokens stay split. Miss if a cheap model takes both, or the frontier loses the dollar stack.</div>
+      </article>
+      <article class="card">
+        <div class="n">P4 <span class="theme">china</span></div>
+        <div class="title">China turns off another ugly input</div>
+        <div class="claim">Within 12 months China restricts or embargoes one more unglamorous input that is not a leading-edge chip: animals, mine software, a refined mineral, or a household robot class.</div>
+        <div class="stats">C3 · I4 · horizon 14 Aug 2027</div>
+        <div class="from">From trend 10. ChinaTalk monkeys, minerals, oil, FCC robots.</div>
+        <div class="sensor">Sensor: a dated export rule plus a price jump or US lab shortage. Miss if the next 12 months are only speeches.</div>
+      </article>
+      <article class="card">
+        <div class="n">P5 <span class="theme">labor</span></div>
+        <div class="title">The trucking pattern shows up in a second industry</div>
+        <div class="claim">Within 12 months another US industry has the same shape: the state shrinks who may do the job, the price of the work goes up, and the life of the worker gets worse.</div>
+        <div class="stats">C2 · I3 · horizon 14 Aug 2027</div>
+        <div class="from">From trend 13. Odd Lots trucking. One industry is not a pattern until there is a second.</div>
+        <div class="sensor">Sensor: a second named industry with a rule change, a rate or wage jump, and worse job conditions in the same window. Miss if trucking stays a one-off.</div>
+      </article>
+    </div>
+    <div class="col stronger">
+      <h2>Stronger</h2>
+      <p class="empty">Empty. A prediction moves here when a new tape or a sensor reading raises confidence, not when we like the story more.</p>
+    </div>
+    <div class="col weaker">
+      <h2>Weaker</h2>
+      <p class="empty">Empty. A prediction moves here when the world starts disagreeing.</p>
+    </div>
+    <div class="col hit">
+      <h2>Hit</h2>
+      <p class="empty">Empty. A hit needs the sensor, dated.</p>
+    </div>
+    <div class="col miss">
+      <h2>Miss</h2>
+      <p class="empty">Empty. A miss is a feature. The track record is the point.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.tabs button');
+  function show(id) {
+    document.querySelectorAll('.pane').forEach(function (p) { p.classList.toggle('on', p.id === 'pane-' + id); });
+    tabs.forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-pane') === id); });
+    var leg = document.getElementById('trend-legend');
+    if (leg) leg.style.display = id === 'trends' ? 'flex' : 'none';
+  }
+  tabs.forEach(function (b) {
+    b.addEventListener('click', function () { show(b.getAttribute('data-pane')); });
+  });
+  if (location.hash === '#predictions') show('preds');
+})();
+</script>
 </body>
 </html>
