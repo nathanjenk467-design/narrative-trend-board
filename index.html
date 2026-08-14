@@ -125,7 +125,7 @@
   .pane.on { display: block; }
   .preds {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 0.8fr 0.8fr;
+    grid-template-columns: 1.6fr 0.9fr 0.9fr 0.75fr 0.75fr;
     gap: 12px;
     padding: 18px 32px 28px;
     align-items: start;
@@ -337,50 +337,50 @@
     <span><i class="swatch" style="background:#5c4a1f"></i>Weaker</span>
     <span><i class="swatch" style="background:#1a4d2e"></i>Hit</span>
     <span><i class="swatch" style="background:#2a2222"></i>Miss</span>
-    <span>C confidence · I impact · horizon · sensor</span>
+    <span>How sure · how big if true · call-by date</span>
   </div>
   <section class="preds">
     <div class="col open">
       <h2>Open</h2>
       <article class="card">
         <div class="n">P1 <span class="theme">compute</span></div>
-        <div class="title">By year-end the plants are still the brake</div>
-        <div class="claim">On 31 Dec 2026, chip rental prices and factory lead times are still tight or tighter than today, even if AI stocks have another scare. The July pattern repeats: papers panic, plants do not.</div>
-        <div class="stats">C4 · I5 · horizon 31 Dec 2026</div>
-        <div class="from">From trends 15, 16, 7.</div>
-        <div class="sensor">Sensor: GPU rental index and TSMC / CoWoS lead times vs an AI stock basket. Hit if plants stay tight after a scare. Miss if lead times and rents break while talk stays hot.</div>
+        <div class="title">The chip factories will still be the bottleneck at Christmas, even if the stocks crash again</div>
+        <div class="story">The plants that make AI chips were not built fast enough. That is why computers for intelligence are expensive, and why a three-year-old chip still earns money. In July the newspapers and the stock market had a panic that felt like 2022. A fund manager went looking for a real-world reason and could not find one: chips were getting easier to get, rental prices were up, people were using more, not less. The scare was in the share price. It was not in the factories.</div>
+        <div class="force">Thesis: by 31 December 2026 that is still true. Another scare may hit the papers. The wait for a new chip, and the price to rent one, will still be tight or tighter.</div>
+        <div class="from">Wrong if: the wait gets easy and rents collapse, while everyone is still talking about AI.</div>
+        <div class="stats">How sure: 4/5 · How big if true: 5/5 · Call by 31 Dec 2026</div>
       </article>
       <article class="card">
         <div class="n">P2 <span class="theme">credit</span></div>
-        <div class="title">Weirder money produces a public crack</div>
-        <div class="claim">Within 12 months, one AI-linked credit, insurance-float, or pension structure is restructured, defaulted, or forced into a public filing that names the circular bit.</div>
-        <div class="stats">C3 · I5 · horizon 14 Aug 2027</div>
-        <div class="from">From trend 6. Narratives: Gurley circular, Nvidia risky business, Gavin credit wrappers.</div>
-        <div class="sensor">Sensor: a named facility in a 10-K, bankruptcy, or FT/WSJ reconstruction. Talk alone is not a hit. Miss if the build is still paid in ordinary cash and the exotic paper is gone.</div>
+        <div class="title">Someone in the AI money chain will break in public within a year</div>
+        <div class="story">The build is so expensive that companies are no longer just paying cash. Chip sellers are lending to their own buyers. Nvidia is reaching into insurance money and pension money. Labs pay three to five times the old price for scarce chips. The same dollars go around the same few companies and get counted as revenue. That can look like a boom on paper while the cash never came from a real customer.</div>
+        <div class="force">Thesis: before 14 August 2027, one of these strange loans or insurance deals will blow up, get rewritten, or show up in a newspaper with a real company name on it. A podcast complaining about circular money is not enough.</div>
+        <div class="from">Wrong if: a year from now the plants are still being paid with ordinary cash, and the strange paper is gone.</div>
+        <div class="stats">How sure: 3/5 · How big if true: 5/5 · Call by 14 Aug 2027</div>
       </article>
       <article class="card">
         <div class="n">P3 <span class="theme">compute</span></div>
-        <div class="title">Dollars stay at the frontier. Tokens do not.</div>
-        <div class="claim">In 12 months OpenAI and Anthropic still take most of the model dollars. Cheap and Chinese open models take most of the tokens. The two markets do not re-merge.</div>
-        <div class="stats">C4 · I4 · horizon 14 Aug 2027</div>
-        <div class="from">From trends 2 and 3. Narratives: Sacks two-tier, Atallah Luna, BG2 90% dollars.</div>
-        <div class="sensor">Sensor: OpenRouter mix plus lab earnings / API price. Hit if dollars and tokens stay split. Miss if a cheap model takes both, or the frontier loses the dollar stack.</div>
+        <div class="title">OpenAI and Anthropic will still take the money. Cheap models will take the usage.</div>
+        <div class="story">There are two markets now, and they are not the same. The two best labs can still charge for the model itself. Everyone a year behind can only charge for computers and consulting. When one expensive model got ten times cheaper, people used it thirteen times more. Cheap and Chinese open models already do most of the everyday work. Money and usage have split.</div>
+        <div class="force">Thesis: a year from now that split is still there. The expensive labs still collect most of the dollars. The cheap models still do most of the work.</div>
+        <div class="from">Wrong if: a cheap model starts collecting the dollars too, or the expensive labs lose the dollar pile.</div>
+        <div class="stats">How sure: 4/5 · How big if true: 4/5 · Call by 14 Aug 2027</div>
       </article>
       <article class="card">
         <div class="n">P4 <span class="theme">china</span></div>
-        <div class="title">China turns off another ugly input</div>
-        <div class="claim">Within 12 months China restricts or embargoes one more unglamorous input that is not a leading-edge chip: animals, mine software, a refined mineral, or a household robot class.</div>
-        <div class="stats">C3 · I4 · horizon 14 Aug 2027</div>
-        <div class="from">From trend 10. ChinaTalk monkeys, minerals, oil, FCC robots.</div>
-        <div class="sensor">Sensor: a dated export rule plus a price jump or US lab shortage. Miss if the next 12 months are only speeches.</div>
+        <div class="title">China will cut off one more boring supply that is not a chip</div>
+        <div class="story">China already stopped exporting research monkeys. US labs ran short and prices jumped. It already refines most of the rare earths, and it is moving to own the software that runs the mines, not just the rocks. In the Iran oil shock it quietly used stockpiles the West cannot see. Household robot vacuums just went on a US security list. This is not the Taiwan chip-plant story. It is the ugly stuff around the plants that nobody built a second source for.</div>
+        <div class="force">Thesis: within a year China will restrict or stop one more of these unglamorous things — animals, mine software, a refined mineral, or a class of household robots. A speech is not enough. There has to be a dated rule, and a price jump or a lab that cannot get the thing.</div>
+        <div class="from">Wrong if: the next year is only talk.</div>
+        <div class="stats">How sure: 3/5 · How big if true: 4/5 · Call by 14 Aug 2027</div>
       </article>
       <article class="card">
         <div class="n">P5 <span class="theme">labor</span></div>
-        <div class="title">The trucking pattern shows up in a second industry</div>
-        <div class="claim">Within 12 months another US industry has the same shape: the state shrinks who may do the job, the price of the work goes up, and the life of the worker gets worse.</div>
-        <div class="stats">C2 · I3 · horizon 14 Aug 2027</div>
-        <div class="from">From trend 13. Odd Lots trucking. One industry is not a pattern until there is a second.</div>
-        <div class="sensor">Sensor: a second named industry with a rule change, a rate or wage jump, and worse job conditions in the same window. Miss if trucking stays a one-off.</div>
+        <div class="title">What happened to trucking will happen to one more American job</div>
+        <div class="story">US trucking rates jumped, but not because the economy came back. The state kicked people out of the job with licenses, language tests, and lawsuit risk. Drivers are more miserable than when rates were low: cameras and speed limiters killed the old cowboy job. Parking is short. Brokers need a checkbox after huge court verdicts. One industry is not a pattern.</div>
+        <div class="force">Thesis: within a year another American industry will show the same three things at once. The government shrinks who is allowed to do the work. The price of the work goes up. The life of the worker gets worse.</div>
+        <div class="from">Wrong if: trucking stays a one-off.</div>
+        <div class="stats">How sure: 2/5 · How big if true: 3/5 · Call by 14 Aug 2027</div>
       </article>
     </div>
     <div class="col stronger">
