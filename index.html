@@ -76,6 +76,19 @@
     padding: 12px 13px;
     margin-bottom: 8px;
   }
+  .tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    border: 1px solid #5c4a1f;
+    color: #c9b27a;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    vertical-align: 2px;
+  }
   .card .n { font-size: 12px; color: var(--muted); margin-bottom: 3px; }
   .card .title { font-weight: 650; font-size: 16px; }
   .card .story { margin-top: 6px; font-size: 14px; color: var(--ink); }
@@ -109,7 +122,7 @@
 <header>
   <h1>Trend board</h1>
   <p class="lede">AI chip factories are still dramatically under-built for the demand. That scarcity is why compute is getting dearer, why old cards still earn, and why the money is moving to whoever owns plants, power, and chips. The smartest two labs can still charge for the model. Everyone else is selling tokens, rent, or software a chatbot can replace. China is catching up through data and open weights, and by locking the ugly supply chains the West forgot. July’s stock scare did not show up in the factories.</p>
-  <p class="meta">14 Aug 2026. Heat is what the world is doing, plus who is talking. Factory shortage and dearer compute sit in Rising with the rest. Nothing peaking. Nothing killed.</p>
+  <p class="meta">14 Aug 2026. Heat is what the world is doing, plus who is talking. Factory shortage, dearer compute, and the July split sit in Rising. Nothing peaking. Nothing killed.</p>
 </header>
 
 <div class="legend">
@@ -157,6 +170,13 @@
       <div class="story">When a model got ten times cheaper, people used it thirteen times more. July’s scare about Chinese open models is good for chip and power landlords, not a kill. The tokens still need the same machines. Margin moves from the lab to the plant.</div>
       <div class="force">Force: cheaper intelligence creates more work, not a smaller pie.</div>
       <div class="from">From: 20VC Atallah (Luna). Gavin Baker 4 Aug. All-In Friedberg on mixing cheap and expensive models.</div>
+    </article>
+    <article class="card">
+      <div class="n">7 <span class="tag">thermometer</span></div>
+      <div class="title">In July the market panicked. The factories did not.</div>
+      <div class="story">AI stock prices had a crash month that felt like 2022. Gavin Baker went looking for a real-world reason and could not find one. Chips were getting easier to get, rental prices were up, memory was up, and people were using more tokens, not less. The scare was in the price of the shares. It was not in the plants. One extra twist: almost everyone now feeds the news into Claude, so the market’s story collapsed to one voice.</div>
+      <div class="force">Force: the share price and the factory can point opposite ways. Read both.</div>
+      <div class="from">From: Gavin Baker, Invest Like the Best, 4 Aug.</div>
     </article>
   </div>
 
@@ -247,19 +267,6 @@
   <div class="col dead">
     <h2>Dead</h2>
     <p class="empty">Empty. Nothing killed this pass.</p>
-  </div>
-</section>
-
-<section class="strip">
-  <h2>Thermometer</h2>
-  <div class="row">
-    <article class="card">
-      <div class="n">7</div>
-      <div class="title">July: talk crashed, factories sped up</div>
-      <div class="story">AI stock prices felt like 2022 in a month. Gavin Baker could not find a single negative on-the-ground number: chip availability, rental prices, memory, token growth all accelerated. Everyone now feeds the news into Claude, so the market’s interpretation collapsed to one voice. This is not a world story. It is the instrument that tells you attention and reality have split.</div>
-      <div class="force">Force: price is not the factory.</div>
-      <div class="from">From: Gavin Baker 4 Aug.</div>
-    </article>
   </div>
 </section>
 </body>
